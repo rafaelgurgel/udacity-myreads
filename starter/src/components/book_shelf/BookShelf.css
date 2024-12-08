@@ -1,0 +1,56 @@
+.bookshelf {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookshelf:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.bookshelf-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.bookshelf-books {
+  display: flex;
+}
+
+.book-shelf-changer {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #007aff;
+  background-image: url('../../icons/arrow-drop-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book-shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .bookshelf {
+    padding: 20px 40px;
+  }
+}

@@ -1,0 +1,78 @@
+.books-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.books-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.books-grid li {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-grid li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book {
+  position: relative;
+  width: 140px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.book:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.book-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+.book-authors {
+  font-size: 14px;
+  color: #777;
+}
+
+.book-cover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f2f2f2;
+  border-radius: 8px;
+}
+
+.book-cover-title {
+  padding: 10px 5px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+@media screen and (min-width: 768px) {
+  .books-grid li {
+    padding: 10px 20px;
+  }
+  .book {
+    width: 160px;
+  }
+}

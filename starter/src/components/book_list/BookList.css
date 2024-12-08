@@ -1,0 +1,18 @@
+.list-books-title {
+  padding: 15px 0;
+  background: #007aff;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-books-title h1 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.list-books-content {
+  padding: 10px 0 80px;
+  flex: 1;
+}
