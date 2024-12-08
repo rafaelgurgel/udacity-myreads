@@ -16,7 +16,7 @@ MyReads is a book tracking app that allows users to organize books into three ca
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-repo/myreads.git
+   git clone https://github.com/rafaelgurgel/myreads.git
 
 2. Navigate to the project directory, install the dependencies and start the server:
    ```bash
