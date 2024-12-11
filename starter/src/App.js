@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookList from "./components/book_list/BookList";
 import Search from "./components/search/Search";
 import BookDetails from "./components/book_details/BookDetails";
+import NotFound from "./components/not_found/NotFound";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -16,12 +17,14 @@ function App() {
   const updateBookShelf = (book, shelf) => {
     update(book, shelf).then(() => {
       setBooks((prevBooks) => {
-        const updatedBooks = prevBooks.map((b) =>
+        let updatedBooks = prevBooks.map((b) =>
           b.id === book.id ? { ...b, shelf } : b
         );
+  
         if (!updatedBooks.some((b) => b.id === book.id)) {
-          updatedBooks.push({ ...book, shelf });
+          updatedBooks = updatedBooks.concat({ ...book, shelf });
         }
+  
         return updatedBooks;
       });
     });
@@ -45,6 +48,7 @@ function App() {
             path="/details/:id"
             element={<BookDetails getBookById={getBookById} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
